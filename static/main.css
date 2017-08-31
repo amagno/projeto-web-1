@@ -25,8 +25,10 @@ body {
     display: inline-block;
     background-color: #2b2e39;
     width: 100%;
-    animation: all 0.2s;
     height: 55px;
+}
+.animation {
+    transition: all 0.2s linear;
 }
 .nav {
     float: left;
@@ -37,13 +39,37 @@ body {
     margin: 10px;
 }
 .nav-links {
-    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
 }
 .nav-links li {
+    margin-right: 20px;    
     display: inline;
+    line-height: 50px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #b1b3be;
+    text-transform: uppercase;
+}
+.nav-links li a:hover {
+    color: rgb(222, 79, 79);
+}
+.secondary-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+}
+.nav-links li a:hover > ul.secondary-menu {
+    display: block;
 }
 .right {
     float: right;
+}
+nav > ul.nav.nav-links.right {
+    font-size: 8pt;
+    text-transform: none;
 }
 
 /* header */
@@ -55,7 +81,7 @@ body {
     text-align: center;
     margin-top: 50px;
     display: inline-block;
-    min-height: 800px;
+    min-height: 750px;
     background-image: url(assets/bg-header-star.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -100,8 +126,8 @@ body {
 }
 /* link button */
 .link-button {
-    
     height: 50px;
+    line-height: 15px;
     width: 200px;
     display: inline-block;
     text-align: center;
@@ -110,9 +136,22 @@ body {
     font-size: 13px;
     text-decoration: none;
     color: #fff;
-    background-color: #de4f4f;
     margin: 10px;
-    line-height: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.link-button.btn-left {
+    border: thin solid transparent;    
+    background-color: #de4f4f;
+}
+.link-button.btn-right {
+    background-color: none;
+    border: thin solid #fff;
+}
+
+.link-button:hover {
+    background-color: #a83636;
+    border: thin solid transparent;    
 }
 .header-links .link-button > span {
     display: block;
@@ -142,20 +181,18 @@ body {
     height: 50px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 110px auto;
-    width: 150px;
-}
-
-.integration ul {
-    -webkit-filter: grayscale(100%);
+    width: 130px;
 }
 
 .integration ul li {
-    height: 50px;
+    filter: grayscale(100%);
+    max-height: 50px;
+    background-size: 110px 50px;
 }
 
 .integration ul li:hover {
--webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all 0.3s linear;
 }
 
 /* logo bgs */
@@ -167,15 +204,18 @@ body {
 }
 #mongo {
     background-image: url(assets/icon-mongo.svg);    
+    background-size: 110px;     
 }
 #graphql {
     background-image: url(assets/icon-graphql.svg);    
 }
 #npm {
-    background-image: url(assets/icon-npm.svg);    
+    background-image: url(assets/icon-npm.svg);
+    background-size: 70px;     
 }
 #cordova {
     background-image: url(assets/icon-cordova.svg);    
+    background-size: 100px;     
 }
 
 /* line page */
@@ -453,12 +493,11 @@ footer {
     width: 100%;
     line-height: 20px;
 }
-
 .get-started {
     max-width: 840px;
     width: calc(100% - 40px);
     padding: 0 20px;
-    margin: 50px auto 30px;
+    margin: 50px auto;  
 }
 .get-started .link-button {
     border-left: 1px solid #adadad;
@@ -496,12 +535,34 @@ footer {
     display: inline-block;
     width: calc(100% - 70px);
 }
+.getstar {
+    width: 620px;
+    font-weight: bold;
+}
 
-.meteor-icon {
+.fundo-icon {
+    margin: 0 30px 0 0;
     display: block;
-    text-indent: -9999px;
-    width: 110px;
+    width: 155px;
     height: 55px;
-    background: url(assets/logo.svg);
-    background-size: 110px 55px;
+    background-color: #de4f4f;
+    text-align: center; 
+}
+.fundo-icon img {
+    height: 26px;
+    margin-top: 10px;
+}
+
+.btn-rectangle-out {
+    border: thin solid #de4f4f;
+}
+
+.list-footer {
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.link-button:hover {
+    background-color: #a83636;
+    color: #fff;
 }
