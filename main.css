@@ -31,9 +31,10 @@ body {
     transition: all 0.2s linear;
 }
 .nav {
-    float: left;
+    float: left;    
     margin: 0;
     list-style: none;
+    line-height: 55px;
 }
 .nav-title {
     margin: 10px;
@@ -43,6 +44,7 @@ body {
     font-weight: bold;
     font-size: 10pt;
 }
+
 .nav-links li {
     margin-right: 20px;    
     display: inline;
@@ -51,7 +53,7 @@ body {
 .nav-links li a {
     text-decoration: none;
     color: #b1b3be;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .nav-links li a:hover {
     color: rgb(222, 79, 79);
@@ -64,14 +66,35 @@ body {
 .nav-links li a:hover > ul.secondary-menu {
     display: block;
 }
+
 .right {
     float: right;
+}
+nav > ul.nav.nav-links.left {
+    text-transform: uppercase;
 }
 nav > ul.nav.nav-links.right {
     font-size: 8pt;
     text-transform: none;
+    font-family: 'ProximaNovaT-ThinBold'; 
+    font-weight: bold;
+    font-size: 12px;   
 }
-
+.right > li {
+    margin-right: 10px;    
+}
+.right:last-child {
+    margin-right: 20px;
+}
+.text-bar {
+    content: '';
+    height: 7px;
+    margin: 0;
+    border: 1px solid #dadeeb;
+    position: absolute;
+    top: 23px;
+    right: 85px
+}
 /* header */
 
 .header-container {
@@ -97,6 +120,10 @@ nav > ul.nav.nav-links.right {
     position: relative;
     z-index: 2;
 }
+.header-banner h6 {
+    font-family: 'ProximaNovaT-Thin'; 
+    
+}
 
 .header-container h6 {
     font-size: 28px;
@@ -117,7 +144,7 @@ nav > ul.nav.nav-links.right {
     font-size: 15px;
     color: #bac1d7;
     line-height: 22px;
-    /* font-family: 'ProximaNovaT-Thin' */
+    font-family: 'ProximaNovaT-Thin';
 }
 
 /* header links */
@@ -127,26 +154,43 @@ nav > ul.nav.nav-links.right {
 /* link button */
 .link-button {
     height: 50px;
-    line-height: 15px;
     width: 200px;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    padding: 14px 0 6px;
+    /* padding: 14px 0 6px; */
     font-size: 13px;
     text-decoration: none;
     color: #fff;
     margin: 10px;
     cursor: pointer;
     font-weight: bold;
+    line-height: 50px;
+    font-family: 'ProximaNovaT-Bold';
+    
 }
 .link-button.btn-left {
     border: thin solid transparent;    
     background-color: #de4f4f;
+    color: #fff;
+    border: none;
+    width: 200px;
+    padding: 14px 0 6px;
+    line-height: 10px;
+}
+.link-button.btn-left span {
+    font-family: 'ProximaNovaT-Thin';
+    display: inline-block;
+    text-transform: capitalize;
+    width: 100%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 100;    
 }
 .link-button.btn-right {
     background-color: none;
     border: thin solid #fff;
+    line-height: 50px;
 }
 
 .link-button:hover {
@@ -297,11 +341,67 @@ nav > ul.nav.nav-links.right {
 /* companies */
 .companies {
     text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 55px;
+}
+.companies-images {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto 0px;
+}
+.companies ul li {
+    width: 120px;
+    float: left;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+.companies ul li:hover {
+    filter: grayscale(0);
+}
+.companies img {
+    max-width: 95%
 }
 .companie-link {
 
 }
-
+.companie-link#tour {
+    width: 75px;
+    text-align: right;
+}
+.companie-link#tour img {
+    width: 60%;
+    text-align: right;
+}
+.companie-link#qualco {
+    width: 140px;
+    text-align: right;
+}
+.companie-link#qualco img {
+    margin-top: 15px;
+    width: 80%
+}
+.companie-link#honeywell {
+    width: 130px;
+}
+.companie-link#honeywell img {
+    margin-top: 15px;
+}
+.companie-link#ikea {
+    text-align: left;
+    width: 110px;
+}
+.companie-link#ikea img {
+    margin-top: 10px;
+    width: 70%;
+}
+.companie-link#mazda {
+    text-align: left;
+}
+.companie-link#mazda img {
+    width: 45%;
+    margin-left: 20px;
+}
 
 /*  build meteor */
 
@@ -388,6 +488,7 @@ nav > ul.nav.nav-links.right {
 .view-more .link-button {
     width: 180px;
     height: 40px;
+    line-height: 40px;
     display: block;
     font-size: 11px;
     color: #de4f4f;
@@ -449,15 +550,6 @@ footer {
     width: 100%;
     padding: 20px 0 25px;
 }
-@media (min-width: 1200px) {
-    footer .container {
-        width: 1170px;
-        margin: 0 auto;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-}
 .list-footer {
     display: flex;
     padding: 0 15px;
@@ -466,6 +558,13 @@ footer {
 }
 .list-footer-item {
     width: 20%;
+    text-decoration: none;
+    color: #1f2128;
+    font-weight: bold;
+    font-family: 'ProximaNovaT-Thin';
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;    
 }
 .list-footer-item:first-child {
     width: 30%;
@@ -495,9 +594,10 @@ footer {
 }
 .get-started {
     max-width: 840px;
-    width: calc(100% - 40px);
-    padding: 0 20px;
-    margin: 50px auto;  
+    /* width: calc(100% - 40px); */
+    /* padding: 0 20px; */
+    margin: 50px auto;
+    
 }
 .get-started .link-button {
     border-left: 1px solid #adadad;
@@ -511,35 +611,40 @@ footer {
     letter-spacing: 1px;
     border: 1px solid #de4f4f;
     text-align: center;
-    line-height: 20px;
     transition: all 0.2s;
     text-decoration: none;
     background: transparent;
+    margin: 0;
+    font-family: 'ProximaNovaT-Thin';     
 
 }
-@media (max-width: 768px) {
-    .get-started {
-        width: 100%;
-        font-size: 14px;
-    }
-}
-@media (max-width: 768px) {
-    .get-started .link-button {
-        margin-left: calc(50% - 89px);
-        margin-top: 20px;
-    }
-}
+
 .get-started span  {
     color: #1f2128;
     letter-spacing: 1px;
-    display: inline-block;
-    width: calc(100% - 70px);
+    /* display: inline; */
+    /* width: calc(100% - 70px); */
+    
 }
 .getstar {
-    width: 620px;
+    /* width: 620px; */
     font-weight: bold;
 }
-
+.get-started-text {
+    width: 560px;
+    font-weight: bold;
+    display: inline-block; 
+}
+.meteor-icon {
+    background-image: url(assets/meteor-icon.svg);
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    margin-right: 20px;
+    background-position: right;
+    background-repeat: no-repeat;
+    float: left;
+}
 .fundo-icon {
     margin: 0 30px 0 0;
     display: block;
@@ -552,6 +657,7 @@ footer {
     height: 26px;
     margin-top: 10px;
 }
+
 
 .btn-rectangle-out {
     border: thin solid #de4f4f;

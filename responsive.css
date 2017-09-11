@@ -1,0 +1,21 @@
+
+@media (min-width: 1200px) {
+    footer .container {
+        width: 1170px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+@media (max-width: 768px) {
+    .nav.nav-links {
+        display: none;
+    }
+    .objects .objects-item {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+}
