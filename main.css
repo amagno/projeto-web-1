@@ -672,3 +672,23 @@ footer {
     background-color: #a83636;
     color: #fff;
 }
+.bt-collapse {
+    background: transparent;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 32px;
+}
+.bt-collapse:hover {
+    margin-top: 8px;
+}
+.bt-collapse:hover span {
+    line-height: 15px;
+    transition: all 0.35s ease-in-out;    
+    border-top: 2px solid #de4f4f;    
+}
+.bt-icon-collapse {
+    display: block;
+    border-top: 2px solid #b1b3be;
+    width: 32px;
+    line-height: 8px;
+}
