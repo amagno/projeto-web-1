@@ -10,6 +10,8 @@ body {
     font-family: 'ProximaNova-Regular', arial, sans-serif;
     color: #333333;
     background-color: #ffffff;
+        overflow-x: hidden;
+
 }
 
 .container {
@@ -692,5 +694,6 @@ footer {
     display: block;
     border-top: 2px solid #b1b3be;
     width: 32px;
+    transition: all 0.35s ease-in-out;    
     line-height: 8px;
 }
